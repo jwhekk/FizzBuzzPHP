@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true"
+         verbose="true" 
+         bootstrap="vendor/autoload.php">
+  <testsuites>
+    <testsuite name="jwhekk Test Suite">
+      <directory>tests</directory>
+    </testsuite>
+    <filter>
+      <whitelist>
+        <directory suffix=".php">src/</directory>
+      </whitelist>
+    </filter>
+  </testsuites>
+</phpunit>
