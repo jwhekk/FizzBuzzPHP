@@ -11,6 +11,8 @@ class FizzBuzzPHP
       return "Buzz";
     }elseif ($number % 15 == 0) {
       return "FizzBuzz";
-    }
+    }else {
+      return $number;
+    }  
   }
 }

@@ -25,4 +25,11 @@ class FizzBuzzPHPTest extends \PHPUnit_Framework_TestCase
     $this->assertEquals("FizzBuzz", $fizzbuzz->fizzbuzzer(915));
     $this->assertNotEquals("FizzBuzz", $fizzbuzz->fizzbuzzer(8));
   }
+  public function testFizzBuzzerGivesNumberWithNonMultiple3or5() {
+    $fizzbuzz = new FizzBuzzPHP();
+    $this->assertEquals(4, $fizzbuzz->fizzbuzzer(4));
+    $this->assertEquals(98, $fizzbuzz->fizzbuzzer(98));
+    $this->assertEquals(299, $fizzbuzz->fizzbuzzer(299));
+    $this->assertNotEquals(3, $fizzbuzz->fizzbuzzer(3));
+  }
 }
