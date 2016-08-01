@@ -32,4 +32,8 @@ class FizzBuzzPHPTest extends \PHPUnit_Framework_TestCase
     $this->assertEquals(299, $fizzbuzz->fizzbuzzer(299));
     $this->assertNotEquals(3, $fizzbuzz->fizzbuzzer(3));
   }
+  public function testFizzBuzzerGivesErrorWhenNotANumber() {
+    $fizzbuzz = new FizzBuzzPHP();
+    $this->assertEquals('Not a number!', $fizzbuzz->fizzbuzzer('a'));
+  }
 }
