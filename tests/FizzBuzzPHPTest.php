@@ -36,4 +36,12 @@ class FizzBuzzPHPTest extends \PHPUnit_Framework_TestCase
     $fizzbuzz = new FizzBuzzPHP();
     $this->assertEquals('Not a number!', $fizzbuzz->fizzbuzzer('a'));
   }
+  public function testFizzBuzzListRangeGivesTheRightRange() {
+    $fizzbuzz = new FizzBuzzPHP();
+    // array declaratie zorgt voor geen uitvoer
+    $array = array('FizzBuzz', 916, 917, 'Fizz', 919, 'Buzz',
+                    'Fizz', 922, 923, 'Fizz', 'Buzz', 926, 'Fizz',
+                    928, 929, 'FizzBuzz');
+    $this->assertEquals($array, $fizzbuzz->fizzbuzzListRange(915,930));
+  }
 }
