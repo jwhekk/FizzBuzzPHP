@@ -20,9 +20,13 @@ class FizzBuzzPHP
   public function fizzbuzzListRange($from_number, $to_number) {
     $result = [];
     for ($i=$from_number; $i<=$to_number; $i++) {
-      echo $this->fizzbuzzer($i);
       $result[] .= $this->fizzbuzzer($i);
     }
     return $result;
   }
+}
+$fizzbuzz = new FizzBuzzPHP;
+$array = $fizzbuzz->fizzbuzzListRange(1,100);
+foreach ($array as $item) {
+  echo $item . "\n";
 }
